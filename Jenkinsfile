@@ -5,6 +5,6 @@ node('master')
      checkout scm
      def xml = readFile ('TEST-JSystem_JUnit_report.xml')
      def rootNode = new XmlParser().parseText(xml)
-     println (rootNode.testcase[0].@name)
+     println (rootNode.@failures)
     
 }
